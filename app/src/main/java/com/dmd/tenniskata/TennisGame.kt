@@ -26,14 +26,27 @@ class TennisGame(var playerOne: Player, var playerTwo: Player) {
     private fun isWinner(): String?{
         return when {
             playerOne.sets > 0 -> {
+                playerOne.isWinner = true
+                clearScoreSetsForTests()
                 "${playerOne.playerName} wins"
             }
             playerTwo.sets > 0 -> {
+                playerTwo.isWinner = true
+                clearScoreSetsForTests()
                 "${playerTwo.playerName} wins"
             }
             else -> {
                 null
             }
+        }
+    }
+
+    fun playNextRound(playerOneScoreWin: Int, playerTwoScoreWin: Int): Boolean{
+        return if (playerOne.isWinner || playerTwo.isWinner){
+            false
+        } else {
+            simulateGame(playerOneScore = playerOne.score + playerOneScoreWin, playerTwoScore = playerTwo.score + playerTwoScoreWin)
+            true
         }
     }
 
@@ -62,13 +75,17 @@ class TennisGame(var playerOne: Player, var playerTwo: Player) {
     }
 
     fun clearScoreSetsForTests(){
-        playerOne.score = 0
-        playerTwo.score = 0
-
-        playerOne.isAdvantage = false
-        playerTwo.isAdvantage = false
-
-        playerOne.sets = 0
-        playerTwo.sets = 0
+        playerOne.apply {
+            this.score = 0
+            this.sets = 0
+            this.isAdvantage = false
+            this.isWinner = false
+        }
+        playerTwo.apply {
+            this.score = 0
+            this.sets = 0
+            this.isAdvantage = false
+            this.isWinner = false
+        }
     }
 }

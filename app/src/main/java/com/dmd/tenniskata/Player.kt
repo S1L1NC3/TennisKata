@@ -4,6 +4,7 @@ data class Player(var playerName: String){
     var score: Int = 0
     var sets: Int = 0
     var isAdvantage: Boolean = false
+    var isWinner: Boolean = false
 
     fun isDeuceWithOpponentScore(scoreToCompare: Int): Boolean{
         return scoreToCompare == score && score > 3
