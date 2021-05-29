@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TennisKata</string>
+    <string name="simulate_play">Simulate Play</string>
 </resources>
