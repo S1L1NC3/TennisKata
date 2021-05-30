@@ -12,7 +12,8 @@ fore better and less BoilerPlate code. And very simple code for code review and 
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> README.md changed</li>
+<li><b>Last Commit:</b> Strings.xml modified for localization & names connected to resources</li>
+<li><b>bb5ba7b:</b> README.md changed</li>
 <li><b>dcb8ae2:</b> README.md changed</li>
 <li><b>3e8b558:</b> Randoms added & activity_main.xml modified & not used imports removed & playNextRound() according to randoms</li>
 <li><b>c42de1c:</b> README.md modified & jCenter() removed cause will for shut down soon & viewBinding and dataBinding enabled & kotlin-kapt applied  & activity_main.xml modified &  CompareUtil created for isAdvantage decide from players & Player data class created & Strings.xml modified for not using Hardcoded text & TestClasses and explanations added</li>

@@ -7,7 +7,7 @@ import com.dmd.tenniskata.databinding.ActivityMainBinding
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    var players = arrayOf(Player("Marcus Willis"), Player("Roger Federer"))
+    var players = arrayOf(Player(resources.getString(R.string.player_one_name)), Player(resources.getString(R.string.player_two_name)))
     var gameInstance = TennisGame(players[0], players[1])
 
     private lateinit var binding: ActivityMainBinding

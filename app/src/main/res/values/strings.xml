@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">TennisKata</string>
+    <string name="app_name">Tennis Kata App</string>
     <string name="simulate_play">Simulate Play</string>
+    <string name="player_one_name" translatable="false">Marcus Willis</string>
+    <string name="player_two_name" translatable="false">Roger Federer</string>
 </resources>
